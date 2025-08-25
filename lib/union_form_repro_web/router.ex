@@ -18,6 +18,13 @@ defmodule UnionFormReproWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    live "/credentials", CredentialsLive.Index, :index
+    live "/credentials/new", CredentialsLive.Form, :new
+    live "/credentials/:id/edit", CredentialsLive.Form, :edit
+
+    live "/credentials/:id", CredentialsLive.Show, :show
+    live "/credentials/:id/show/edit", CredentialsLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.
