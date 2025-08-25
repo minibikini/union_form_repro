@@ -16,7 +16,7 @@ defmodule UnionFormRepro.Services.Credentials do
   attributes do
     uuid_v7_primary_key :id
 
-    attribute :access, UnionFormRepro.Services.Credentials.XyzCredentials do
+    attribute :access, UnionFormRepro.Services.Credentials.CredentialsType do
       allow_nil? false
       public? true
     end
