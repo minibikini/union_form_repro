@@ -5,4 +5,4 @@ An attempt to reproduce the error with AshPhoenix.Form and Ash.Union. See [the s
 - Run `mix setup` to install and setup dependencies
 - Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-- Open [`http://localhost:4000/credentials/new`](http://http://localhost:4000/credentials/new) and try to create a new record.
+- Open [`http://localhost:4000/credentials/new`](http://localhost:4000/credentials/new) and try to create a new record.
