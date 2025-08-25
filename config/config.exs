@@ -44,7 +44,8 @@ config :spark,
 
 config :union_form_repro,
   ecto_repos: [UnionFormRepro.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ash_domains: [UnionFormRepro.Services]
 
 # Configures the endpoint
 config :union_form_repro, UnionFormReproWeb.Endpoint,
