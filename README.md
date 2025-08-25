@@ -1,18 +1,8 @@
 # UnionFormRepro
 
-To start your Phoenix server:
+An attempt to reproduce an error with AshPhoenix.Form and Ash.Union. See [the support thread](https://discord.com/channels/711271361523351632/1409304608144232548) on the Ash Discord for the context.
 
-* Run `mix setup` to install and setup dependencies
-* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+- Run `mix setup` to install and setup dependencies
+- Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
+- Open [`http://localhost:4000/credentials/new`](http://http://localhost:4000/credentials/new) and try to create a new record.
