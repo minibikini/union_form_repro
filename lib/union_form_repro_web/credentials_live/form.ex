@@ -16,7 +16,9 @@ defmodule UnionFormReproWeb.CredentialsLive.Form do
         phx-change="validate"
         phx-submit="save"
       >
-        <.input field={@form[:access]} type="text" label="Access" />
+        <.inputs_for :let={form_access} field={@form[:access]}>
+          <.input type="text" label="API Key" field={form_access[:api_key]} />
+        </.inputs_for>
 
         <.button phx-disable-with="Saving..." variant="primary">Save Credentials</.button>
         <.button navigate={return_path(@return_to, @credentials)}>Cancel</.button>
@@ -66,6 +68,8 @@ defmodule UnionFormReproWeb.CredentialsLive.Form do
         {:noreply, socket}
 
       {:error, form} ->
+        IO.inspect(form)
+        IO.inspect(AshPhoenix.Form.raw_errors(form))
         {:noreply, assign(socket, form: form)}
     end
   end
@@ -79,6 +83,9 @@ defmodule UnionFormReproWeb.CredentialsLive.Form do
       else
         AshPhoenix.Form.for_create(UnionFormRepro.Services.Credentials, :create,
           as: "credentials"
+        )
+        |> AshPhoenix.Form.add_form(:access,
+          params: %{"_union_type" => "xyz"}
         )
       end
 
