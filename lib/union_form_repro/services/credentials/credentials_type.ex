@@ -4,8 +4,7 @@ defmodule UnionFormRepro.Services.Credentials.CredentialsType do
     constraints: [
       types: [
         xyz: [
-          type: :struct,
-          constraints: [instance_of: UnionFormRepro.Services.Credentials.XyzCredentials],
+          type: UnionFormRepro.Services.Credentials.XyzCredentials,
           tag: :type,
           tag_value: :xyz
         ]
